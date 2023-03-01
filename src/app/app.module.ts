@@ -3,18 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CardComponent } from './components/card/card.component';
 import { ToggleButtomComponent } from './components/toggle-buttom/toggle-buttom.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { CharactersComponent } from './components/characters/characters.component';
+import { CharacterComponent } from './components/character/character.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent,
     ToggleButtomComponent,
-    NavigationComponent
+    NavigationComponent,
+    CharactersComponent,
+    CharacterComponent
   ],
   imports: [
     BrowserModule,

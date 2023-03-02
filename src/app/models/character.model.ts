@@ -1,4 +1,4 @@
-import { Gender, Info, Species, Status } from "src/types";
+import { Gender, Info, Species, Status, Location } from "src/types.d";
 
 export interface CharacterData {
   info: Info;

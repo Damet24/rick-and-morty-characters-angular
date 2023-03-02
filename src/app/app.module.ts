@@ -8,7 +8,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './components/characters/characters.component';
-import { CharacterComponent } from './components/character/character.component'
+import { CharacterComponent } from './components/character/character.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,7 @@ import { CharacterComponent } from './components/character/character.component'
     ToggleButtomComponent,
     NavigationComponent,
     CharactersComponent,
-    CharacterComponent
+    CharacterComponent,
   ],
   imports: [
     BrowserModule,

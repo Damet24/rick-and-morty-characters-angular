@@ -14,7 +14,7 @@ const routes: Routes = [
     component: CharactersPageComponent
   },
   {
-    path: 'character',
+    path: 'character/:id',
     component: CharacterPageComponent
   },
 ];

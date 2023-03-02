@@ -9,6 +9,7 @@ import { CharacterService } from 'src/app/services/character.service';
 })
 export class CharactersPageComponent implements OnInit {
 
+  characterName: string = ''
   characters: Character[] = []
 
   constructor(private characterService: CharacterService) { }
@@ -16,7 +17,13 @@ export class CharactersPageComponent implements OnInit {
   ngOnInit(): void {
     this.characterService.getAllCharacters()
       .subscribe(data => {
-        console.log(data);
+        this.characters = data.results
+      })
+  }
+
+  searchCharacter() {
+    this.characterService.getAllCharacters(this.characterName)
+      .subscribe(data => {
         this.characters = data.results
       })
   }

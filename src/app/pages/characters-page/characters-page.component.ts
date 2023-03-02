@@ -38,7 +38,7 @@ export class CharactersPageComponent implements OnInit {
   }
 
   searchCharacter() {
-    this.characterService.getAllCharacters(this.characterName, this.page ?? '1')
+    this.characterService.getAllCharacters(this.characterName)
       .subscribe(data => {
         this.info = data.info
         this.characters = data.results

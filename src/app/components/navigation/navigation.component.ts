@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
+
+  showMedun = true
+
+  toggleMenu() {
+    this.showMedun = !this.showMedun
+  }
 }

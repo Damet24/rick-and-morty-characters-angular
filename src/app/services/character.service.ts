@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { CharacterData, Character } from '../models/character.model';
+import { Episode } from '../models/episode.model';
 
 @Injectable({
   providedIn: 'root'
@@ -19,5 +20,9 @@ export class CharacterService {
 
   getOneCharacter(id: string) {
     return this.http.get<Character>(`${this.apiUrl}/character/${id}`)
+  }
+
+  getEpisodeName(url: string) {
+    return this.http.get<Episode>(url)
   }
 }

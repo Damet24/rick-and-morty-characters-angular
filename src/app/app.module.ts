@@ -15,6 +15,7 @@ import { CharactersPageComponent } from './pages/characters-page/characters-page
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { StatusPipe } from './pipes/status.pipe';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { StatusPipe } from './pipes/status.pipe';
     FormsModule,
     HttpClientModule,
     FormsModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

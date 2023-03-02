@@ -12,10 +12,11 @@ export class CharacterService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCharacters(name: string = '') {
-    console.log(`${this.apiUrl}/character/?name=${name}`);
-
-    return this.http.get<CharacterData>(`${this.apiUrl}/character/?name=${name}`)
+  getAllCharacters(name: string = '', url: string = '') {
+    if (url) {
+      return this.http.get<CharacterData>(url)
+    }
+    else return this.http.get<CharacterData>(`${this.apiUrl}/character/?name=${name}`)
   }
 
   getOneCharacter(id: string) {

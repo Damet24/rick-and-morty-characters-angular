@@ -1,15 +1,23 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CharacterData } from '../models/character.model';
+import { CharacterData, Character } from '../models/character.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CharacterService {
 
+  apiUrl = 'https://rickandmortyapi.com/api'
+
   constructor(private http: HttpClient) { }
 
-  getAllCharacters() {
-    return this.http.get<CharacterData>('https://rickandmortyapi.com/api/character')
+  getAllCharacters(name: string = '') {
+    console.log(`${this.apiUrl}/character/?name=${name}`);
+
+    return this.http.get<CharacterData>(`${this.apiUrl}/character/?name=${name}`)
+  }
+
+  getOneCharacter(id: string) {
+    return this.http.get<Character>(`${this.apiUrl}/character/${id}`)
   }
 }

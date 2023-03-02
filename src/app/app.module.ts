@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './components/characters/characters.component';
 import { CharacterComponent } from './components/character/character.component';
+import { LinkButtonComponent } from './components/link-button/link-button.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CharacterComponent } from './components/character/character.component';
     NavigationComponent,
     CharactersComponent,
     CharacterComponent,
+    LinkButtonComponent,
   ],
   imports: [
     BrowserModule,

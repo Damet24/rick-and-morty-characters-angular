@@ -1,3 +1,4 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { switchMap } from 'rxjs';
@@ -12,9 +13,14 @@ import { CharacterService } from 'src/app/services/character.service';
 export class CharacterPageComponent implements OnInit {
 
   characterId: string | null = null
-  characters: Character | null = null
+  character: Character | null = null
+  firstEpisode: string = ''
 
-  constructor(private route: ActivatedRoute, private characterService: CharacterService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private characterService: CharacterService,
+    private location: Location
+  ) { }
 
   ngOnInit() {
     this.route.paramMap.pipe(switchMap(params => {
@@ -23,7 +29,15 @@ export class CharacterPageComponent implements OnInit {
       return []
     }))
       .subscribe(data => {
-        this.characters = data
+        this.characterService.getEpisodeName(data.episode[0])
+          .subscribe(episode => {
+            this.firstEpisode = episode.name
+          })
+        this.character = data
       })
+  }
+
+  goToBack() {
+    this.location.back()
   }
 }

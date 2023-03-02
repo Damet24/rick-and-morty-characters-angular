@@ -14,6 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { StatusPipe } from './pipes/status.pipe';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     CharactersPageComponent,
     CharacterPageComponent,
     NotFoundComponent,
+    StatusPipe,
   ],
   imports: [
     BrowserModule,

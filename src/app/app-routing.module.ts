@@ -6,7 +6,7 @@ import { CharacterPageComponent } from './pages/character-page/character-page.co
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent
   },
   {

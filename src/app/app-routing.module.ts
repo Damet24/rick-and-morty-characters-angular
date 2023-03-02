@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
     path: 'character/:id',
     component: CharacterPageComponent
   },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];
 
 @NgModule({

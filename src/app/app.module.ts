@@ -13,6 +13,7 @@ import { LinkButtonComponent } from './components/link-button/link-button.compon
 import { HomeComponent } from './pages/home/home.component';
 import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
 import { CharacterPageComponent } from './pages/character-page/character-page.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CharacterPageComponent } from './pages/character-page/character-page.co
     HomeComponent,
     CharactersPageComponent,
     CharacterPageComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

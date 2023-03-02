@@ -35,7 +35,7 @@ import { StatusPipe } from './pipes/status.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

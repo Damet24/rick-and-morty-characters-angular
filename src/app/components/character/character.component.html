@@ -1,11 +1,11 @@
 <article class="transition-all max-w-sm bg-white border dark:border-gray-900 border-gray-200 dark:bg-black rounded-lg dark:text-white hover:shadow-lg hover:shadow-blue-500/50 focus:outline-none">
-  <a href="{{url}}">
+  <a [routerLink]="['/character/', id]">
     <img class="rounded-t-lg w-full" src={{image}} alt={{name}} />
   </a>
   <div class="p-5">
-    <a href="{{url}}">
+    <a [routerLink]="['/character/', id]">
       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Rick Sanchez</h5>
     </a>
-    <app-link-button [url]="url" [text]="'Read more'" />
+    <app-link-button [url]="'/character/' + id" [text]="'Read more'" />
   </div>
 </article>

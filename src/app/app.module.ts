@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CharactersComponent } from './components/characters/characters.component';
 import { CharacterComponent } from './components/character/character.component';
 import { LinkButtonComponent } from './components/link-button/link-button.component';
+import { HomeComponent } from './pages/home/home.component';
+import { CharactersPageComponent } from './pages/characters-page/characters-page.component';
+import { CharacterPageComponent } from './pages/character-page/character-page.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { LinkButtonComponent } from './components/link-button/link-button.compon
     CharactersComponent,
     CharacterComponent,
     LinkButtonComponent,
+    HomeComponent,
+    CharactersPageComponent,
+    CharacterPageComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ import { Info } from '../../../types.d'
 })
 export class CharactersPageComponent implements OnInit {
 
-  characterName: string = ''
+  characterName = ''
   info: Info = {
     count: 0,
     pages: 0,

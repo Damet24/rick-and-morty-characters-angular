@@ -14,7 +14,7 @@ export class CharacterPageComponent implements OnInit {
 
   characterId: string | null = null
   character: Character | null = null
-  firstEpisode: string = ''
+  firstEpisode = ''
 
   constructor(
     private route: ActivatedRoute,

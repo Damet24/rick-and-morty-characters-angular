@@ -6,6 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./link-button.component.scss']
 })
 export class LinkButtonComponent {
-  @Input() url: string = '#'
-  @Input() text: string = 'default'
+  @Input() url = '#'
+  @Input() text = 'default'
 }

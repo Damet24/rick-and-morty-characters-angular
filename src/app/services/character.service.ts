@@ -12,7 +12,7 @@ export class CharacterService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCharacters(name: string = '', url: string = '') {
+  getAllCharacters(name = '', url = '') {
     if (url) {
       return this.http.get<CharacterData>(url)
     }
